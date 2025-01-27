@@ -2,9 +2,9 @@ import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import esLintConfigLove from "eslint-config-love";
 import jsdoc from "eslint-plugin-jsdoc";
-import tseslint from "typescript-eslint";
+import tseslint, { type ConfigArray } from "typescript-eslint";
 
-export const esLintConfigLegReq = tseslint.config(
+export const esLintConfigLegReq: ConfigArray = tseslint.config(
     {
         ignores: ["eslint.config.js", "dist"]
     },
