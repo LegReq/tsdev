@@ -26,6 +26,7 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
 
         rules: {
             "complexity": "off",
+            "max-depth": ["error", 10],
             "max-lines": "off",
             "no-dupe-class-members": "off",
             "no-redeclare": "off",
