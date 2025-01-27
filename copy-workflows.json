@@ -1,0 +1,16 @@
+{
+  "copyFiles": [
+    {
+      "from": ".github/workflows/release.yml",
+      "to": "../pandoc-defref/.github/workflows/"
+    },
+    {
+      "from": ".github/workflows/release.yml",
+      "to": "../pandoc-spec/.github/workflows/"
+    }
+  ],
+
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  }
+}

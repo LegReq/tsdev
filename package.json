@@ -1,0 +1,41 @@
+{
+  "name": "@legreq/tsdev",
+  "version": "1.0.0-beta",
+  "description": "Shared TypeScript development artefacts for Legendary Requirements",
+  "type": "module",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/legreq",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legreq/tsdev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/legreq/tsdev/issues"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Kevin Dean",
+    "email": "kevin@legreq.com",
+    "url": "https://www.linkedin.com/in/kdean"
+  },
+  "scripts": {
+    "copy-workflows": "copy-files-from-to --config copy-workflows.json",
+    "lint": "eslint .",
+    "build-dist": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.12.0",
+    "eslint": "^9.18.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.18.0",
+    "@stylistic/eslint-plugin": "^3.0.0",
+    "eslint-config-love": "^118.0.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "typescript-eslint": "^8.20.0"
+  }
+}
