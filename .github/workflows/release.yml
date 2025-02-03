@@ -11,3 +11,4 @@ on:
 jobs:
   release:
       uses: legreq/tsdev/.github/workflows/_release.yml@main
+      secrets: inherit
