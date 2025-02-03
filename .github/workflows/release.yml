@@ -10,8 +10,4 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check event
-        uses: legreq/tsdev/.github/workflows/_release@main
+      uses: legreq/tsdev/.github/workflows/_release@main
