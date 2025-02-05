@@ -23,7 +23,7 @@ import tseslint, { type ConfigArray } from "typescript-eslint";
 
 export const esLintConfigLegReq: ConfigArray = tseslint.config(
     {
-        ignores: ["eslint.config.js", "dist"]
+        ignores: ["eslint.config.ts", "dist"]
     },
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
