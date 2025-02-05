@@ -1,7 +1,24 @@
+/*!
+ * Copyright © 2025 Legendary Requirements
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import esLintConfigLove from "eslint-config-love";
 import jsdoc from "eslint-plugin-jsdoc";
+// @ts-expect-error -- No .d.ts file available, pending https://github.com/nickdeis/eslint-plugin-notice/issues/32.
+import notice from "eslint-plugin-notice";
 import tseslint, { type ConfigArray } from "typescript-eslint";
 
 export const esLintConfigLegReq: ConfigArray = tseslint.config(
@@ -22,6 +39,11 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
 
         linterOptions: {
             reportUnusedDisableDirectives: "error"
+        },
+
+        plugins: {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- No .d.ts file available, pending https://github.com/nickdeis/eslint-plugin-notice/issues/32.
+            notice
         },
 
         rules: {
@@ -96,6 +118,10 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
             "jsdoc/tag-lines": ["warn", "any", {
                 count: 1,
                 startLines: 1
+            }],
+
+            "notice/notice": ["error", {
+                templateFile: "node_modules/@legreq/tsdev/src/copyright.ts"
             }]
         }
     },
