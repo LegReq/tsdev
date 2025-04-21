@@ -45,8 +45,8 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
         },
 
         plugins: {
-            reactHooks,
-            reactRefresh,
+            "react-hooks": reactHooks,
+            "react-refresh": reactRefresh,
             notice
         },
 
