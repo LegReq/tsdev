@@ -19,12 +19,8 @@
     "url": "https://www.linkedin.com/in/kdean"
   },
   "scripts": {
-    "copy-workflows": "copy-files-from-to --config copy-workflows.json",
     "lint": "eslint .",
     "build-dist": "tsup src/index.ts --format cjs,esm --dts --minify"
-  },
-  "devDependencies": {
-    "copy-files-from-to": "^3.12.1"
   },
   "dependencies": {
     "@eslint/js": "^9.35.0",
