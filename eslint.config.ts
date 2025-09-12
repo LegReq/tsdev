@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import tseslint from "typescript-eslint";
 import { esLintConfigLegReq } from "./dist/index.js";
+import { defineConfig } from "eslint/config";
 
-export default tseslint.config(
-    ...esLintConfigLegReq,
+export default defineConfig(
+    esLintConfigLegReq,
     {
         rules: {
             "notice/notice": ["error", {

@@ -18,12 +18,13 @@ import stylistic from "@stylistic/eslint-plugin";
 import esLintConfigLove from "eslint-config-love";
 import jsdoc from "eslint-plugin-jsdoc";
 import notice from "eslint-plugin-notice";
-import tseslint, { type ConfigArray } from "typescript-eslint";
-import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import tseslint, { type ConfigArray } from "typescript-eslint";
 
-export const esLintConfigLegReq: ConfigArray = tseslint.config(
+export const esLintConfigLegReq: ConfigArray = defineConfig(
     {
         ignores: ["dist"]
     },
@@ -31,8 +32,8 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
     ...tseslint.configs.strictTypeChecked,
     stylistic.configs.recommended,
     jsdoc.configs["flat/recommended-typescript"],
-    esLintConfigLove,
     {
+        ...esLintConfigLove,
         languageOptions: {
             parserOptions: {
                 projectService: true
@@ -54,6 +55,7 @@ export const esLintConfigLegReq: ConfigArray = tseslint.config(
             ...reactHooks.configs.recommended.rules,
 
             "complexity": "off",
+            // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- Not applicable to ESLint.
             "max-depth": ["error", 10],
             "max-lines": "off",
 
