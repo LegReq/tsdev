@@ -22,18 +22,18 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import tseslint, { type ConfigArray } from "typescript-eslint";
+import tseslint from "typescript-eslint";
 
-export const esLintConfigLegReq: ConfigArray = defineConfig(
+export const esLintConfigLegReq = defineConfig([
     {
         ignores: ["dist"]
     },
+    esLintConfigLove,
     js.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     stylistic.configs.recommended,
     jsdoc.configs["flat/recommended-typescript"],
     {
-        ...esLintConfigLove,
         languageOptions: {
             parserOptions: {
                 projectService: true
@@ -51,9 +51,9 @@ export const esLintConfigLegReq: ConfigArray = defineConfig(
             notice
         },
 
-        rules: {
-            ...reactHooks.configs.recommended.rules,
+        extends: ["react-hooks/recommended"],
 
+        rules: {
             "complexity": "off",
             // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- Not applicable to ESLint.
             "max-depth": ["error", 10],
@@ -209,4 +209,4 @@ export const esLintConfigLegReq: ConfigArray = defineConfig(
             "@typescript-eslint/no-unsafe-type-assertion": "off"
         }
     }
-);
+]);

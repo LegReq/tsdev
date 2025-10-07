@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { esLintConfigLegReq } from "./dist/index.js";
+import { esLintConfigLegReq } from "./dist";
 import { defineConfig } from "eslint/config";
 
-export default defineConfig(
-    esLintConfigLegReq,
+export default defineConfig([
+    ...esLintConfigLegReq,
     {
         rules: {
             "notice/notice": ["error", {
-                templateFile: "src/copyright.ts"
+                templateFile: "src/copyright-apache-license.ts"
             }]
         }
     },
     {
         files: [
-            "src/copyright.ts"
+            "src/copyright-apache-license.ts"
         ],
         rules: {
             "notice/notice": "off"
         }
     }
-);
+]);
