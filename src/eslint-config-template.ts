@@ -194,6 +194,7 @@ export const esLintConfigLegReq = defineConfig([
                     checkGetters: false
                 }
             ],
+            "jsdoc/require-yields-type": "off",
             "jsdoc/tag-lines": [
                 "warn",
                 "any",
