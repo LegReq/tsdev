@@ -9,16 +9,19 @@
     "noPropertyAccessFromIndexSignature": true,
 
     // Modules.
-    "module": "nodenext",
+    "module": "es2022",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
+
+    // Emit.
+    "declaration": true,
 
     // Interop constraints.
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
     // Language and environment.
-    "target": "esnext",
-    "useDefineForClassFields": true,
+    "target": "es2022",
 
     // Completeness.
     "skipLibCheck": true

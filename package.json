@@ -20,23 +20,24 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "build-dist": "tsup src/index.ts --format cjs,esm --dts --minify"
+    "build-dist": "tsc --project tsconfig-build-local.json",
+    "build-dist-dev": "tsc --project tsconfig-build-local-dev.json"
   },
   "dependencies": {
-    "@eslint/js": "^9.36.0",
+    "@eslint/js": "9.36.0",
     "@stylistic/eslint-plugin": "^5.4.0",
-    "eslint": "^9.36.0",
+    "eslint": "9.36.0",
     "eslint-config-love": "^130.0.0",
-    "eslint-plugin-jsdoc": "^60.7.1",
+    "eslint-plugin-jsdoc": "^60.8.3",
     "eslint-plugin-notice": "^1.1.0-rc1",
-    "eslint-plugin-react-hooks": "^6.1.0",
+    "eslint-plugin-react-hooks": "^6.1.1",
     "eslint-plugin-react-refresh": "^0.4.23",
     "globals": "^16.4.0",
     "jiti": "^2.6.1",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "tsup": "^8.5.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.45.0"
+    "typescript-eslint": "^8.46.0"
   }
 }

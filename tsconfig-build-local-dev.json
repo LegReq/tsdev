@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig-build-local.json",
+
+  "compilerOptions": {
+    // Emit.
+    "declarationMap": true,
+    "sourceMap": true
+  }
+}
