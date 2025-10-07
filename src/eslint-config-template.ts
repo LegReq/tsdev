@@ -59,6 +59,12 @@ export const esLintConfigLegReq = defineConfig([
             "max-depth": ["error", 10],
             "max-lines": "off",
 
+            "no-negated-condition": "off",
+            "no-param-reassign": ["error", {
+                props: false
+            }],
+            "no-plusplus": "off",
+
             // Handled by @typescript-eslint/no-unused-vars.
             "no-unused-vars": "off",
 
@@ -85,6 +91,7 @@ export const esLintConfigLegReq = defineConfig([
                 }
             ],
             "@typescript-eslint/prefer-destructuring": "off",
+            "@typescript-eslint/restrict-template-expressions": "off",
             "@typescript-eslint/unbound-method": [
                 "error",
                 {
