@@ -91,7 +91,14 @@ export const esLintConfigLegReq = defineConfig([
                 }
             ],
             "@typescript-eslint/prefer-destructuring": "off",
-            "@typescript-eslint/restrict-template-expressions": "off",
+            "@typescript-eslint/restrict-template-expressions": ["error", {
+                allowAny: false,
+                allowBoolean: true,
+                allowNever: false,
+                allowNullish: false,
+                allowNumber: true,
+                allowRegExp: false
+            }],
             "@typescript-eslint/unbound-method": [
                 "error",
                 {
