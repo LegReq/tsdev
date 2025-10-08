@@ -1,6 +1,6 @@
 {
   "name": "@legreq/tsdev",
-  "version": "1.0.11-beta",
+  "version": "1.0.12-beta",
   "description": "Shared TypeScript development artefacts for Legendary Requirements",
   "type": "module",
   "main": "dist/index.js",
